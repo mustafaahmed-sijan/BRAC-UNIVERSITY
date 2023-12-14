@@ -1,10 +1,11 @@
-Task 1
+#Task 1
 Write the python programs, which prints the following sequences of values in loops:
 a) 24, 18, 12, 6, 0, -6
 b) -10, -5, 0, 5, 10, 15, 20
 c) 18, 27, 36, 45, 54, 63
    
 ===============================================================
+
 Hint (1): You may use a while loop for solving these problems.
 Hint (2): We are already familiar with the print() function. But, when we use it to print any value, it automatically adds an additional newline after each print statement.
 For example:
@@ -13,6 +14,7 @@ print(2)
 Output:
 1
 2
+
 ===============================================================
 To solve this problem, in Python3, we can add an extra argument (end = " ") in the print function which tells the program to skip printing the additional newline.
 For example:
