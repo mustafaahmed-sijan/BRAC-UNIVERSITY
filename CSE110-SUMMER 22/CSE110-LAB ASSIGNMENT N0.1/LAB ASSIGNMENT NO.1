@@ -1,1 +1,2126 @@
-
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#PDF LINK :\n",
+        "https://docs.google.com/document/d/1ctS8Y58j0nXVwVutB_H39FD9Qb7saMwF/edit"
+      ],
+      "metadata": {
+        "id": "ljGvXyeBgPDG"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Task 1**\n",
+        "Write the python programs, which prints the following sequences of values in loops:\n",
+        "\n",
+        "\n",
+        "a) 24, 18, 12, 6, 0, -6\n",
+        "\n",
+        "b) -10, -5, 0, 5, 10, 15, 20\n",
+        "\n",
+        "c) 18, 27, 36, 45, 54, 63\n",
+        "\n",
+        "\n",
+        "\n",
+        "===============================================================\n",
+        "\n",
+        "Hint (1): You may use a while loop for solving these problems.\n",
+        "\n",
+        "Hint (2): We are already familiar with the print() function. But, when we\n",
+        "use it to print any value, it automatically adds an additional newline after\n",
+        "\n",
+        "each print statement.\n",
+        "\n",
+        "For example:\n",
+        "\n",
+        "print(1)\n",
+        "\n",
+        "print(2)\n",
+        "\n",
+        "Output:\n",
+        "\n",
+        "1\n",
+        "\n",
+        "2\n",
+        "\n",
+        "===============================================================\n",
+        "\n",
+        "To solve this problem, in Python3, we can add an extra argument (end = \" \")\n",
+        "in the print function which tells the program to skip printing the\n",
+        "additional newline.\n",
+        "\n",
+        "For example:\n",
+        "\n",
+        "print(1, end =\"\")\n",
+        "\n",
+        "\n",
+        "print(2)\n",
+        "\n",
+        "Output: (prints the next output right to the previous one)\n",
+        "\n",
+        "12\n",
+        "\n",
+        "===============================================================\n",
+        "\n",
+        "In Task-1(a), the loop counter may be initialized at 24 and then the loop\n",
+        "should terminate when the loop counter reaches -6. The difference between\n",
+        "the first two values is 24 - 18 = 6. So, the loop counter value is getting\n",
+        "decremented by 6 in every iteration for the given sequence here.\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "T9MQWbv78Pgd"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# TASK 1 (A)\n",
+        "\n",
+        "for i in range(24,-7,-6):\n",
+        "  if i== -6:\n",
+        "    print(i,end=\" \")\n",
+        "  else:\n",
+        "    print(i,end=\",\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5RfnO-5f8ZyD",
+        "outputId": "67ca3cea-4892-41d5-ab4c-9db08193a411"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "24,18,12,6,0,-6 "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Task 1 (B)\n",
+        "\n",
+        "for i in range(-10,21,5):\n",
+        "  if i==20:\n",
+        "    print(i,end=\",\")\n",
+        "  else:\n",
+        "    print(i,end=\",\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Fve2FBGL9403",
+        "outputId": "8ba4262b-6180-473c-c471-125069deaa12"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "-10,-5,0,5,10,15,20,"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Task 1 (C)\n",
+        "\n",
+        "for i in range(18,64,9):\n",
+        "  if i==63:\n",
+        "    print(i,end=\" \")\n",
+        "  else:\n",
+        "    print(i,end=\",\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VTqTa4pW-Ddl",
+        "outputId": "c9c02298-8212-4eac-c8cd-dd0b9223aced"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "18,27,36,45,54,63 "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Task 2**\n",
+        "\n",
+        "\n",
+        "Write a Python code for the following:\n",
+        "\n",
+        "1) Ask the user to enter the name of his favorite car.\n",
+        "\n",
+        "2) Ask the user to enter a Number\n",
+        "\n",
+        "Display the name of the user’s favorite car, the number of times specified\n",
+        "in the second step.\n",
+        "\n",
+        "===============================================================Example 1: If\n",
+        "the user enters “Toyota” and 2, your program should print the name “Toyota”\n",
+        "two times.\n",
+        "\n",
+        "Sample Input 1:\n",
+        "\n",
+        "Toyota\n",
+        "\n",
+        "2\n",
+        "\n",
+        "Sample Output 1:\n",
+        "\n",
+        "Toyota\n",
+        "\n",
+        "Toyota\n",
+        "\n",
+        "===============================================================Example 2: If\n",
+        "the user enters “Veyron” and 5, your program should print the name “Veyron”\n",
+        "five times.\n",
+        "\n",
+        "Sample Input 2:\n",
+        "\n",
+        "Veyron\n",
+        "\n",
+        "5\n",
+        "\n",
+        "Sample Output 2:\n",
+        "\n",
+        "Veyron\n",
+        "\n",
+        "Veyron\n",
+        "\n",
+        "Veyron\n",
+        "\n",
+        "Veyron\n",
+        "\n",
+        "\n",
+        "Veyron\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "cnNb4mDXOsC7"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user=str(input(\" Enter the name of your favourite car : \"))\n",
+        "num=int(input(\" Enter any number : \"))\n",
+        "\n",
+        "for i in range(0,num,1):\n",
+        "  print(user)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GSmEmbHgOr0O",
+        "outputId": "9b73e011-4332-4e19-f0fb-06c6453faa66"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Enter the name of your favourite car : toyota\n",
+            " Enter any number : 2\n",
+            "toyota\n",
+            "toyota\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "\n",
+        "# Task 3\n",
+        "\n",
+        " i.e. 63, 126, 189, 252, ....\n",
+        "\n",
+        "\n",
+        "The output of your program should be: 2835\n",
+        "\n",
+        "since 63 + 126 + 189 + 252 + 315 + 378 + 441 + 504 + 567 = 2835\n"
+      ],
+      "metadata": {
+        "id": "6mMwJNTwP-FI"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#myb there is a printing mistake in task no 4 (not detailed )\n"
+      ],
+      "metadata": {
+        "id": "S8MXDN35QExM"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Task 4**\n",
+        "Write a Python code of a program that adds all numbers that are multiples of either 7 or 9 but not both, up to 600 (including 600) i.e. 7, 9, 14, 18, 21..... and so on but not the numbers 63, 126, 189..... which are multiples of both 7 and 9.\n",
+        "The output of your program should be: 39814\n"
+      ],
+      "metadata": {
+        "id": "uMbTI_7GRqUf"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sum=0\n",
+        "for i in range(0,601):\n",
+        "  if (i%7==0 and  i%9!=0) or (i%9==0 and i%7!=0):\n",
+        "    sum=sum+i\n",
+        "print(sum)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oLagJr6bRtGa",
+        "outputId": "b7d3b61a-8733-4c5e-a6f9-b487f4b72575"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "39814\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "# Task 5\n",
+        "\n",
+        "Write the Python code of a program that displays all the odd numbers between 10 and 50 (inclusive).\n",
+        "\n",
+        "Output: 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49"
+      ],
+      "metadata": {
+        "id": "v5_cM9NLStm9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for i in range(10,51):\n",
+        "  if i%2!=0:\n",
+        "    print(i,end=\" \")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TSEtksGAStS0",
+        "outputId": "81a1df10-b51d-43d7-f438-1472d714f596"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Task 6\n",
+        "Write a Python code that will calculate the value of y if the expression of y is as follows (n is the input):\n",
+        "y=12−22+32−42+52.........+n2\n",
+        "\n",
+        "===============================================================\n",
+        "\n",
+        "Sample Input 1:\n",
+        "\n",
+        "5\n",
+        "\n",
+        "Sample Output 1:\n",
+        "\n",
+        "15\n",
+        "\n",
+        "Explanation: y = 1 - 4 + 9 - 16 + 25 = 15\n",
+        "\n",
+        "===============================================================Sample Input\n",
+        "2:\n",
+        "\n",
+        "10\n",
+        "\n",
+        "Sample Output 2:\n",
+        "\n",
+        "-55\n",
+        "\n",
+        "Explanation: y = 1 - 4 + 9 - 16 + 25 - 36 + 49 - 64 + 81 - 100 = -55\n",
+        "\n",
+        "===============================================================Sample Input\n",
+        "3:\n",
+        "\n",
+        "20\n",
+        "\n",
+        "Sample Output 3:\n",
+        "\n",
+        "-210\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "hDUyu1qqTJg1"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "limit=int(input(\" Enter number : \"))\n",
+        "\n",
+        "sum=0\n",
+        "\n",
+        "for i in range(1,limit+1):\n",
+        "  if i%2==0:\n",
+        "    sum=sum+ (-1)*i**2\n",
+        "\n",
+        "  else:\n",
+        "    sum=sum+i**2\n",
+        "\n",
+        "print(\" output : \", sum)\n"
+      ],
+      "metadata": {
+        "id": "k2REHU5TTR44"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "# Task 7\n",
+        "Write a Python code of a program that asks the user to enter ten numbers and then display the total and the average of ONLY the odd numbers among those ten numbers.\n",
+        "[Please do not use list for this task]\n",
+        "\n",
+        "===============================================================Sample Input\n",
+        "1:\n",
+        "\n",
+        "1\n",
+        "\n",
+        "\n",
+        "2\n",
+        "\n",
+        "3\n",
+        "\n",
+        "4\n",
+        "\n",
+        "5\n",
+        "\n",
+        "6\n",
+        "\n",
+        "7\n",
+        "\n",
+        "8\n",
+        "\n",
+        "9\n",
+        "\n",
+        "10\n",
+        "\n",
+        "Sample Output 1: The total of the odd numbers is 25 and their average is 5.0\n",
+        "\n",
+        "Explanation: The total is 1 + 3 + 5 + 7 + 9 = 25 and the average is 25/5 = 5.\n",
+        "0\n",
+        "\n",
+        "===============================================================Sample Input\n",
+        "2:\n",
+        "\n",
+        "-20\n",
+        "\n",
+        "13\n",
+        "\n",
+        "-5\n",
+        "\n",
+        "40\n",
+        "\n",
+        "-17\n",
+        "\n",
+        "10\n",
+        "\n",
+        "20\n",
+        "\n",
+        "-8\n",
+        "\n",
+        "99\n",
+        "\n",
+        "-200\n",
+        "\n",
+        "Sample Output 2:\n",
+        "\n",
+        "The total of the odd numbers is 90 and their average is 22.5\n",
+        "\n",
+        "Explanation: The total is 90 = 13 + (-5) + (-17) + 99) and their average is\n",
+        "90/4 = 22.5\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "z1Pk5HYEWKjw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sum=0\n",
+        "count=0\n",
+        "for i in range(0,10):\n",
+        "  user=int(input(\"    Enter number : \"))\n",
+        "\n",
+        "  if user%2!=0:\n",
+        "    sum=sum+user\n",
+        "    count=count+1\n",
+        "\n",
+        "\n",
+        "avg=sum/count\n",
+        "print(\"    sum : \",sum)\n",
+        "print(\"    AVG : \",avg)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9tphV9ncWTYM",
+        "outputId": "011e183c-4767-40e8-9cc0-cd2adda6c205"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "    Enter number : 1\n",
+            "    Enter number : 2\n",
+            "    Enter number : 3\n",
+            "    Enter number : 4\n",
+            "    Enter number : 5\n",
+            "    Enter number : 6\n",
+            "    Enter number : 7\n",
+            "    Enter number : 8\n",
+            "    Enter number : 9\n",
+            "    Enter number : 10\n",
+            "     sum :  25\n",
+            "    AVG :  5.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Task 8\n",
+        "\n",
+        "Write a Python code for the following:\n",
+        "Ask the user to enter a Number, N\n",
+        "Display the summation of multiples of 7 up to that number (from 1 to N\n",
+        "inclusive)\n",
+        "\n",
+        "===============================================================Sample Input\n",
+        "1:\n",
+        "\n",
+        "50\n",
+        "\n",
+        "Sample Output 1:\n",
+        "\n",
+        "196\n",
+        "\n",
+        "Explanation: The summation of multiples of 7 up to 50 is 7 + 14 + 21 + 28 +\n",
+        "35 + 42 + 49 = 196\n",
+        "\n",
+        "===============================================================Sample Input\n",
+        "2:\n",
+        "\n",
+        "75\n",
+        "\n",
+        "Sample Output 2:\n",
+        "\n",
+        "385\n",
+        "\n",
+        "Explanation: The summation of multiples of 7 up to 75 is 7 + 14 + 21 + 28 +\n",
+        "35 + 42 + 49 + 56 + 63 + 70 = 385\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "L5nSGjYvYLMl"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user=int(input(\" Enter the number here : \"))\n",
+        "\n",
+        "\n",
+        "sum=0\n",
+        "\n",
+        "for i in range(0,user):\n",
+        "  if i%7==0:\n",
+        "    sum+=i\n",
+        "\n",
+        "print(sum)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uVofo3x-YQb9",
+        "outputId": "13767678-d93d-41fb-b26e-72d3c91b32f8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Enter the number here : 50\n",
+            "196\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Task 9\n",
+        "Write a Python code that will read 5 numbers from the user. Your program should print the first number, the sum of the first 2 numbers, the sum of the first 3 numbers, and so on up to the sum of 5 numbers.\n",
+        "\n",
+        "===============================================================Sample Input\n",
+        "1:\n",
+        "\n",
+        "1\n",
+        "\n",
+        "2\n",
+        "\n",
+        "3\n",
+        "\n",
+        "4\n",
+        "\n",
+        "5\n",
+        "\n",
+        "Sample Output 1:\n",
+        "\n",
+        "1\n",
+        "\n",
+        "3\n",
+        "\n",
+        "6\n",
+        "\n",
+        "10\n",
+        "\n",
+        "15\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "Explanation:\n",
+        "When the user enters 1 at first, we print 1, then\n",
+        "The user enters 2, (1 + 2) = 3, so our output is 3, then\n",
+        "The user enters 3, (3 + 3) = 6, hence our output is 6, then\n",
+        "The user enters 4, and we have (6 + 4) = 10, we print 10, and finally\n",
+        "The user enters 5, the final sum is 15 which is printed as the last output.\n",
+        "\n",
+        "===============================================================\n",
+        "\n",
+        "Sample Input 2:\n",
+        "\n",
+        "11\n",
+        "\n",
+        "-29\n",
+        "\n",
+        "-3\n",
+        "\n",
+        "47\n",
+        "\n",
+        "50\n",
+        "\n",
+        "Sample Output 2:\n",
+        "\n",
+        "11\n",
+        "\n",
+        "-18\n",
+        "\n",
+        "-21\n",
+        "\n",
+        "26\n",
+        "\n",
+        "76\n",
+        "\n",
+        "Explanation:\n",
+        "\n",
+        "When the user enters 11 at first, we print 11, then\n",
+        "\n",
+        "The user enters -29, (11 + (-29)) = -18, so our output is -18, then\n",
+        "\n",
+        "The user enters -3, (-18 - 3) = -21, hence our output is -21, then\n",
+        "\n",
+        "The user enters 4, and we have (-21 + 47) = 26, we print 26, and finally\n",
+        "\n",
+        "The user enters 50, the final sum is (26 + 50) = 76 which is printed as the\n",
+        "last output.\n"
+      ],
+      "metadata": {
+        "id": "PIF8k5Bkf-Nc"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sum=0\n",
+        "for i in range(1,6):\n",
+        "  user=int(input(\" Enter any number you wanted : \"))\n",
+        "  sum=sum+i\n",
+        "  print(sum)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rguv6yNAgGSf",
+        "outputId": "f250f2b0-ec6f-4e74-d10c-6234220beb3d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Enter any number you wanted : 1\n",
+            "1\n",
+            " Enter any number you wanted : 2\n",
+            "3\n",
+            " Enter any number you wanted : 3\n",
+            "6\n",
+            " Enter any number you wanted : 4\n",
+            "10\n",
+            " Enter any number you wanted : 5\n",
+            "15\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Task 10\n",
+        "\n",
+        "Write a Python program which takes a number and prints the digits from the unit place, then the tenth, then hundredth, etc. (Right to Left)\n",
+        "[Consider the input number to be an INTEGER. You are not allowed to use String indexing for solving this task]\n",
+        "\n",
+        "Example: If the user gives 32768, then print 8, 6, 7, 2, 3\n",
+        "\n",
+        "===============================================================\n",
+        "\n",
+        "Hint (1): The input() function, converts the input data to String data type\n",
+        "by default. Therefore, please type cast it to an integer before proceeding further.\n",
+        "Hint (2): First to get the digit from the right side, we can take the remainder of the number using modulus (%) operator i.e. mod 10 to get the rightmost digit and print it. For dropping the last digit, we can perform floor division by 10 on the number and then continue the same to print the other digits as shown below.\n",
+        "\n",
+        "32768 % 10 = 8\n",
+        "\n",
+        "32768 // 10 = 3276\n",
+        "\n",
+        "Then,\n",
+        "\n",
+        "3276 % 10 = 6\n",
+        "\n",
+        "3276 // 10 = 327\n",
+        "\n",
+        "and so on\n",
+        "\n",
+        "327 % 10 = 7\n",
+        "\n",
+        "327 // 10 = 32\n",
+        "\n",
+        "32 % 10 = 2\n",
+        "\n",
+        "32 // 10 = 3\n",
+        "\n",
+        "3 % 10 = 3\n",
+        "\n",
+        "3 // 10 = 0\n",
+        "\n",
+        "Done! When the number becomes 0 you can end your loop.\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "ZZzk6tYGhOY-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user=int(input(\" Enter the number you want : \"))\n",
+        "\n",
+        "digit=0\n",
+        "\n",
+        "x=0\n",
+        "\n",
+        "while digit<user:\n",
+        "  digit=user%10\n",
+        "  x=user//10\n",
+        "  print(digit,end=\",\")\n",
+        "  user=x"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Sn-NcZIhuna0",
+        "outputId": "a6c9278a-7343-4a5c-abc0-5c2e746c7788"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Enter the number you want : 32768\n",
+            "8,6,7,2,3,"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "\n",
+        "# Task 11\n",
+        "\n",
+        "Write a Python program that takes a number and prints how many digits are in that number.\n",
+        "[Consider the input number to be an INTEGER.]\n",
+        "[You are not allowed to use len() function]\n",
+        "Example: If the user gives 9876, your program should print 4.\n",
+        "\n",
+        "Hint: We may keep floor dividing by ten and count how many times this can be\n",
+        "done until the number becomes 0 as illustrated below.\n",
+        "\n",
+        "9876 // 10 = 987, count = 1\n",
+        "\n",
+        "then, 987 // 10 = 98, count = 2\n",
+        "\n",
+        "98 // 10 = 9, count = 3\n",
+        "\n",
+        "9 // 10 = 0, count = 4\n",
+        "\n",
+        "Done! When the number becomes 0 your loop can end giving you the count of\n",
+        "digits, in this case for our input of 9876, 4 digits.\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "W4awmqP7vV_e"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user=int(input(\" Enter number you want : \"))\n",
+        "count=0\n",
+        "while user!=0:\n",
+        "  user=user//10\n",
+        "  count+=1\n",
+        "print(f\" There are {count } digits \")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bQl17mseyhmw",
+        "outputId": "fa77227b-3a48-4539-9c53-b2a0f7377daf"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Enter number you want : 9874\n",
+            " There are 4 digits \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Task 12\n",
+        "\n",
+        "Write a Python program that takes a number from the user and prints its digits from left to right.\n",
+        "[Consider the input number to be an INTEGER. You are not allowed to use String indexing for solving this task]\n",
+        "\n",
+        "Example: if the user gives 32768, then print 3, 2, 7, 6, 8\n",
+        "\n",
+        "===============================================================\n",
+        "\n",
+        "Hint(1): The input() function takes the input data as String data type by\n",
+        "default. Please convert it to an integer before starting your code for the\n",
+        "task.\n",
+        "\n",
+        "\n",
+        "Hint(2):\n",
+        "\n",
+        "Step 1: First, count how many\n",
+        "\n",
+        "Step 2: Then, calculate 10 to the power (number of digits - 1).\n",
+        "\n",
+        "Step 3 with explanation: Say, the input given by the user as in our example,\n",
+        "32768 has 5 digits, so calculating 10 to the power 4 gives us 10000. Then\n",
+        "floor dividing 32768 by 10000, we can get 3.\n",
+        "\n",
+        "Proceeding further, the remainder of 32768 by 10000 (32768 % 10000) gives us\n",
+        "2768. This time to get 2 we need to floor divide 2768 by 1000 which is\n",
+        "basically our 10000/10. Again, taking remainder of 2768 by 1000 gives us 768\n",
+        "which we then divide by 100 (i.e. 1000/10) and keep on doing this until\n",
+        "there are no more digits left (zero).\n",
+        "\n",
+        "To summarize and clarify:\n",
+        "\n",
+        "Loop 1: First, we count digits like our Task 12, say 5 in this case for 32768\n",
+        "\n",
+        "Loop 2: Then, we calculate 10 to the power 4 (5-1), that is 10000.\n",
+        "\n",
+        "Loop 3: Then we keep repeating the three steps of floor dividing, modulus\n",
+        "and dividing by 10 as demonstrated below.\n",
+        "\n",
+        "32768 // 10000 = 3\n",
+        "\n",
+        "32768 % 10000 = 2768\n",
+        "\n",
+        "10000 // 10 = 1000\n",
+        "\n",
+        "2768 // 1000 = 2\n",
+        "\n",
+        "2768 % 1000 = 768\n",
+        "\n",
+        "1000 // 10 = 100\n",
+        "768 // 100 = 7\n",
+        "\n",
+        "768 % 100 = 68\n",
+        "\n",
+        "100 // 10 = 10\n",
+        "\n",
+        "68 // 10 = 6\n",
+        "\n",
+        "68 % 10 = 8\n",
+        "\n",
+        "10 // 10 = 1\n",
+        "\n",
+        "8 // 1 = 8\n",
+        "\n",
+        "8 % 1 = 0\n",
+        "\n",
+        "1 // 10 = 0\n",
+        "\n",
+        "Done. Loop ends as number has become 0.\n"
+      ],
+      "metadata": {
+        "id": "CwnI6iNQzH_R"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user=int(input(\"enter the number \"))\n",
+        "\n",
+        "#now we will convert this number to string\n",
+        "\n",
+        "new_str=str(user)\n",
+        "\n",
+        "#we will apply foor loop and store them\n",
+        "\n",
+        "for i in new_str:\n",
+        "  new=i.rstrip(\",\")\n",
+        "\n",
+        "  if i==new_str[-1]:\n",
+        "    print(new,end=\" \")\n",
+        "  else:\n",
+        "    print(new,end=\",\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Wg_RKRtm3EAd",
+        "outputId": "fa327741-0c73-406e-c60e-43e3042bbe43"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the number 1234\n",
+            "1,2,3,4 "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Task 13\n",
+        "Write a Python program that takes a number as input from the user and prints the divisors of that number as well as how many divisors the number has.\n",
+        "===============================================================Sample Input 1:\n",
+        "6\n",
+        "Sample Output 1:\n",
+        "1\n",
+        "2\n",
+        "3\n",
+        "6\n",
+        "Total 4 divisors.\n",
+        "===============================================================Sample Input 2:\n",
+        "121\n",
+        "Sample Output 2:\n",
+        "1\n",
+        "11\n",
+        "121\n",
+        "Total 3 divisors.\n"
+      ],
+      "metadata": {
+        "id": "Djw3aTCp4Znn"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user=int(input(\"Enter the number : \"))\n",
+        "c=0\n",
+        "for i in range(1,user+1):\n",
+        "  if user%i==0:\n",
+        "    c+=1\n",
+        "    print(f\"divisor no {c} : \",i)\n",
+        "print(\"\\n\")\n",
+        "print(f\"there are total {c } divisors\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sBjSzeLt4cXv",
+        "outputId": "9f88e864-b250-4332-8658-4ca25f0a0fe4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " enter the number6\n",
+            "divisor no 1 :  1\n",
+            "divisor no 2 :  2\n",
+            "divisor no 3 :  3\n",
+            "divisor no 4 :  6\n",
+            "\n",
+            "\n",
+            "there are total 4 divisors\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "\n",
+        "# Task 14\n",
+        "\n",
+        "\n",
+        "Write a Python program that takes a number as input from the user and tells if it is a perfect number or not.\n",
+        "Perfect Number: An integer number is said to be a perfect number if its factors, including 1 but not the number itself, sum to the number.\n",
+        "\n",
+        "===============================================================Sample Input\n",
+        "1:\n",
+        "\n",
+        "6\n",
+        "\n",
+        "Sample Output 2:\n",
+        "\n",
+        "6 is a perfect number\n",
+        "\n",
+        "Explanation:\n",
+        "\n",
+        "6 has 4 divisors: 1, 2, 3, and 6.\n",
+        "\n",
+        "If we add all factors except 6 itself, 1 + 2 + 3 = 6. The sum of the factors excluding the number itself sum up to the number therefore \"6 is a perfect\n",
+        "number\" is printed.\n",
+        "\n",
+        "===============================================================Sample Input\n",
+        "2:\n",
+        "\n",
+        "28\n",
+        "\n",
+        "Sample Output 2:\n",
+        "\n",
+        "28 is a perfect number\n",
+        "\n",
+        "Explanation:\n",
+        "\n",
+        "28 has the divisors: 1, 2, 4, 7, 14, and 28.\n",
+        "\n",
+        "If we add all factors except itself, we get 28, 1 + 2 + 4 + 7 + 14 = 28.\n",
+        "\n",
+        "===============================================================Sample Input\n",
+        "3:\n",
+        "\n",
+        "33\n",
+        "\n",
+        "Sample Output 3:\n",
+        "\n",
+        "33 is not a perfect number\n",
+        "\n",
+        "Explanation:\n",
+        "33 has 4 divisors: 1, 3, 11, and 33.\n",
+        "\n",
+        "If we add all factors except itself, 15 = 1 + 3 + 11. The sum is not equal\n",
+        "to the number, therefore 33 is not a perfect number.\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "NmBNxa_D56hb"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user=int(input(\" enter the number to check is perfect or not :\"))\n",
+        "\n",
+        "count=0\n",
+        "sum=0\n",
+        "for i in range(1,user):\n",
+        "  if user%i==0:\n",
+        "    count+=1\n",
+        "    sum+=i\n",
+        "\n",
+        "print(\" the summation of divisors : \",sum)\n",
+        "if sum==user:\n",
+        "  print(f\" {user } is a perfect number\")\n",
+        "else:\n",
+        "  print(f\"{user } is not a perfect number  \")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RmQsBA4V58dL",
+        "outputId": "3b8f57d2-5701-421b-8757-f72f01d519ac"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " enter the number to check is perfect or not :6\n",
+            " the summation of divisors :  6\n",
+            " 6 is a perfect number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Task 15\n",
+        "\n",
+        "\n",
+        "Write a Python program that asks the user for one number and tells if it is\n",
+        "a prime number or not.\n",
+        "\n",
+        "Prime Number: If a number has only two divisors, (1 and itself), then it is\n",
+        "a prime number. If it is divisible by more numbers, then it is not a prime.\n",
+        "\n",
+        "Hint: You may use the code for counting divisors from Task 14.\n",
+        "\n",
+        "===============================================================Sample Input\n",
+        "1:\n",
+        "\n",
+        "11\n",
+        "\n",
+        "Sample Output 1:\n",
+        "\n",
+        "11 is a prime number\n",
+        "\n",
+        "Explanation: 11 has only 2 divisors: 1 and 11.\n",
+        "\n",
+        "===============================================================Sample Input\n",
+        "2:\n",
+        "\n",
+        "6\n",
+        "\n",
+        "Sample Output 2:\n",
+        "\n",
+        "6 is not a prime number\n",
+        "\n",
+        "Explanation: 6 has 4 divisors: 1, 2, 3 and 6.\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "KYMQIrdc8mag"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user=int(input(\"Enter a number to check its prime or not :\"))\n",
+        "count=0\n",
+        "for i in range(1,user+1):\n",
+        "  if user %i==0:\n",
+        "    count+=1\n",
+        "\n",
+        "if count>2:\n",
+        "  print(f\" {user } is not a prime number  \")\n",
+        "else:\n",
+        "  print(f\" {user } is a prime number\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0tfwkCed8vMy",
+        "outputId": "657fcc45-b095-45d1-bd35-30107edf9d37"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number to check its prime or not :11\n",
+            " 11 is a prime number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Task 16\n",
+        "\n",
+        "\n",
+        "Write a Python program that asks the user for a quantity, then takes that\n",
+        "many numbers as input and prints the maximum, minimum and average of those\n",
+        "numbers.\n",
+        "\n",
+        "[Please note that you CANNOT use max, min built-in functions]\n",
+        "\n",
+        "[Also, you DO NOT need to use lists for this task]\n",
+        "\n",
+        "===============================================================Example: If\n",
+        "the user enters 5 as an input for quantity and the enters the 5 numbers, 10,\n",
+        "4, -1, -100, and 1.\n",
+        "\n",
+        "The output of your program should be: “Maximum 10”, “Minimum -100”, “Average\n",
+        "is -17.2” as shown below.\n",
+        "\n",
+        "Input:\n",
+        "\n",
+        "5\n",
+        "\n",
+        "10\n",
+        "\n",
+        "4\n",
+        "\n",
+        "-1\n",
+        "\n",
+        "-100\n",
+        "\n",
+        "1\n",
+        "\n",
+        "Output:\n",
+        "\n",
+        "Maximum 10\n",
+        "\n",
+        "Minimum -100\n",
+        "\n",
+        "Average is -17.2\n",
+        "\n",
+        "Explanation: Average calculation: (10 + 4 + (-1) + (-100) + 1)/5 = -86/5 =\n",
+        "-17.2\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "noVzlKnz9vJN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user=int(input(\" enter how many number you want to input : \"))\n",
+        "max=0\n",
+        "min=0\n",
+        "count=0\n",
+        "sum=0\n",
+        "for i in range(1,user+1):\n",
+        "  user_input=int(input(\" Enter the number : \"))\n",
+        "  sum+=user_input\n",
+        "  count+=1\n",
+        "\n",
+        "  if max<user_input:\n",
+        "    max=user_input\n",
+        "  if min>user_input:\n",
+        "    min=user_input\n",
+        "\n",
+        "\n",
+        "avg=sum/count\n",
+        "\n",
+        "print(f\" Maximum number is : \",max)\n",
+        "print(f\" Minimum number is : \", min)\n",
+        "print(f\" avg :\",avg)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OKjb6CBA90LQ",
+        "outputId": "10085e94-6bf3-4b2c-fc8a-51a61fc246e4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " enter how many number you want to input : 5\n",
+            " Enter the number : 10\n",
+            " Enter the number : 4\n",
+            " Enter the number : -1\n",
+            " Enter the number : -100\n",
+            " Enter the number : 1\n",
+            " Maximum number is :  10\n",
+            " Minimum number is :  -100\n",
+            " avg : -17.2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Task 17\n",
+        "\n",
+        "Write a python program that prints a square of size N using + where N will be given as input as illustrated in the examples below.\n",
+        "\n",
+        "Hint: You may need to use nested loops to solve this problem.\n",
+        "\n",
+        "===============================================================Sample Input\n",
+        "1:\n",
+        "\n",
+        "5\n",
+        "\n",
+        "\n",
+        "\n",
+        "Sample Output 1:\n",
+        "\n",
+        "\n",
+        "+++++\n",
+        "\n",
+        "+++++\n",
+        "\n",
+        "+++++\n",
+        "\n",
+        "+++++\n",
+        "\n",
+        "+++++\n",
+        "\n",
+        "Explanation: Here, we may see it as 5 rows and 5 columns, where in each horizontal row/line, 5 '+' is printed next to each other and we have a total of 5 lines.\n",
+        "\n",
+        "================================================\n"
+      ],
+      "metadata": {
+        "id": "FN9y6A01CU2R"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user =int(input(\"enter any number : \"))\n",
+        "\n",
+        "for i in range(user-1):\n",
+        "\n",
+        "  for j in range(user-1):\n",
+        "    print(\"+\",end=\"\")\n",
+        "  print(\"+\")\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jD-XIIkfCfPx",
+        "outputId": "4fe7dd78-8c15-456b-fb23-59e10317e8f5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter any number : 5\n",
+            "+++++\n",
+            "+++++\n",
+            "+++++\n",
+            "+++++\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Task 18**\n",
+        "-------------\n",
+        "____________________________________\n",
+        "Write a python program that prints a rectangle of size M (height/line numbers) and N (length/column numbers) using incrementing numbers where M and N will be given as input. Please look at the examples below for clarification.\n",
+        "Hint: You may need to use nested loops and print the loop counter variable in one of the loops.\n",
+        "______________________________________"
+      ],
+      "metadata": {
+        "id": "nE7CcVs4WPJr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "M=int(input(\"Enter the size line number : \"))\n",
+        "N=int(input(\"Enter the size colum number : \"))\n",
+        "\n",
+        "\n",
+        "for i in range(1,M+1):\n",
+        "\n",
+        "  for j in range(1,N+1):\n",
+        "    print(j,end=\"\")   #j will print in a row\n",
+        "\n",
+        "  print()             # this is empty cz we use this for row only not printing something\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nAT7N1n5WcK8",
+        "outputId": "a078cbac-173c-4ec5-da7a-f7f25ab46a84"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the size line number : 4\n",
+            "Enter the size colum number : 6\n",
+            "123456\n",
+            "123456\n",
+            "123456\n",
+            "123456\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Task 19**\n",
+        "--------\n",
+        "Write a python program that prints a right-angled triangle of height N using incrementing numbers where N will be given as input.\n",
+        "Hint: You may need to use nested loops. Try to think up to which point should the inner loop run.\n",
+        "______________________"
+      ],
+      "metadata": {
+        "id": "6P5A6XP8a-iF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user=int(input(\" Enter number : \"))\n",
+        "\n",
+        "for i in range(1,user+1):\n",
+        "  for j in range(1,i+1):\n",
+        "    print(j,end=\" \")\n",
+        "  print()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Gv0gYfckbH07",
+        "outputId": "aec6a44b-6da3-4287-9826-678e8c1fb3c0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Enter number : 4\n",
+            "1 \n",
+            "1 2 \n",
+            "1 2 3 \n",
+            "1 2 3 4 \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Optional Tasks (25 - 29) [Ungraded]\n",
+        "_______________\n",
+        "These tasks are just for practice. No marks will be deducted for not completing them and no extra marks will be given for solving them. Just try and practice these advanced problems.\n",
+        "\n",
+        "----------"
+      ],
+      "metadata": {
+        "id": "sFUjYmy0ghAA"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Task 25\n",
+        "____________________\n",
+        "Write a python program that prints all the Fibonacci numbers from 0 to N where N will be given as input by the user.\n",
+        "A Fibonacci number is a number which is the summation of its previous two Fibonacci numbers.\n",
+        "The first two Fibonacci numbers are 0 and 1.\n",
+        "So, the 3rd is 0 + 1 = 1,\n",
+        "the 4th is 1 + 1 = 2,\n",
+        "the 5th is 1 + 2 = 3,\n",
+        "the 6th one is 2 + 3 = 5,\n",
+        "and so on.\n",
+        "i.e. 0, 1, 1, 2, 3, 5, 8, 13, 21.......\n",
+        "===============================================================Sample Input 1:\n",
+        "10\n",
+        "Sample Output 1:\n",
+        "0 1 1 2 3 5 8\n",
+        "Explanation: All Fibonacci numbers up to the number 10 is printed separated by spaces.\n",
+        "===============================================================Sample Input 2:\n",
+        "15\n",
+        "Sample Output 2:\n",
+        "0 1 1 2 3 5 8 13\n",
+        "Explanation: All Fibonacci numbers up to the number 15 is printed separated by spaces.\n",
+        "__________________________"
+      ],
+      "metadata": {
+        "id": "q-H5CAYTgst6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user=int(input(\" Enter number : \"))\n",
+        "x=0\n",
+        "y=1\n",
+        "\n",
+        "for i in range(1,user+1):\n",
+        "  new=y\n",
+        "  pre=0\n",
+        "\n",
+        "  print(new)\n",
+        "  pre=new+i\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UUXjvyNng19q",
+        "outputId": "7e938dbd-1030-466a-a341-882d1f8da5ec"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Enter number : 3\n",
+            "1\n",
+            "1\n",
+            "1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user=int(input(\" Enter number to get fibonacci series upto : \"))\n",
+        "\n",
+        "\n",
+        "pre=0\n",
+        "new=1\n",
+        "sum=0\n",
+        "\n",
+        "print(pre,new,end=\" \")\n",
+        "for i in range(1,user+1):\n",
+        "\n",
+        "  sum=pre+new\n",
+        "\n",
+        "  pre=new\n",
+        "  new=sum\n",
+        "\n",
+        "\n",
+        "  if sum<user:\n",
+        "    print(sum,end=\" \")\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GLIHu8B0aI50",
+        "outputId": "2d8f2b0e-208c-4eb0-8125-893ffbee9978"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Enter number to get fibonacci series upto : 15\n",
+            "0 1 1 2 3 5 8 13 "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#**Task 26**\n",
+        "------------------------\n",
+        "Write a python program that converts a decimal integer number to a binary number.\n",
+        "Hint: A decimal can be converted to a binary number by keeping track of the remainders after each division of that number by 2.\n",
+        "===============================================================Example 1:\n",
+        "For example, to convert 11 to a binary number, we can try the following approach.\n",
+        "11 // 2 = 5 (Remainder 1)\n",
+        "5 // 2 = 2 (Remainder 1)\n",
+        "2 // 2 = 1 (Remainder 0)\n",
+        "1 // 2 = 0 (Remainder 1)\n",
+        "Now, taking the remainders from bottom to top gives us the binary number which is 1011. Binary of 11 is 1011.\n",
+        "Sample Input 1:\n",
+        "11\n",
+        "Sample Output 1:\n",
+        "1011\n",
+        "===============================================================Example 2:\n",
+        "Similarly, to convert 13 to a binary number:\n",
+        "13 // 2 = 6 (Remainder 1)\n",
+        "6 // 2 = 3 (Remainder 0)\n",
+        "3 // 2 = 1 (Remainder 1)\n",
+        "1 // 2 = 0 (Remainder 1)\n",
+        "Again, taking the remainders from the bottom to top, which is 1101 gives us the binary number. Binary of 13 is 1101.\n",
+        "Sample Input 2:\n",
+        "13\n",
+        "Sample Output 2:\n",
+        "1101\n",
+        "\n",
+        "\n",
+        "-------------------------\n"
+      ],
+      "metadata": {
+        "id": "qRlXM29Qf5xu"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user=int(input(\" HI ! welcome to decimal to bianary converter \"))\n",
+        "for i in range(user,0,-1):\n",
+        "  calc=i//2\n",
+        "  mod=i%2\n",
+        "  print(mod)\n",
+        "  calc=mod"
+      ],
+      "metadata": {
+        "id": "bCSklal-f5YH",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "33ffb025-4ef9-45b3-d66c-14fb8407c08c"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " HI ! welcome to decimal to bianary converter 11\n",
+            "1\n",
+            "0\n",
+            "1\n",
+            "0\n",
+            "1\n",
+            "0\n",
+            "1\n",
+            "0\n",
+            "1\n",
+            "0\n",
+            "1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user=int(input(\" Enter a number you wanted : \"))\n",
+        "\n",
+        "\n",
+        "mod=user%2\n",
+        "print(\"first: \",mod)\n",
+        "x=user//2\n",
+        "mod=x%2\n",
+        "print(\"again: \", mod)\n",
+        "y=x//2\n",
+        "mod=y%2\n",
+        "print(\"3:\",mod)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EcUcBpXtQZaF",
+        "outputId": "6bbf96ab-ed2f-429b-ac49-8b2b12ee1e35"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Enter a number you wanted : 11\n",
+            "first:  1\n",
+            "again:  1\n",
+            "3: 0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"_________________________________________\")\n",
+        "print(\" WELCOME TO DECIMAL TO BIANARY CONVERTER \")\n",
+        "print(\"-----------------------------------------\")\n",
+        "\n",
+        "user=int(input(\" Enter number to convert : \"))\n",
+        "bny=\"\"\n",
+        "count=0\n",
+        "\n",
+        "for i in range(1,user+1):\n",
+        "  mod=user%2\n",
+        "  cal=user//2\n",
+        "  print(mod)\n",
+        "  bny+=str(mod)\n",
+        "\n",
+        "  count+=1\n",
+        "  user=cal\n",
+        "\n",
+        "  if user==0:\n",
+        "    break\n",
+        "\n",
+        "print(\"-------------------------------\")\n",
+        "print(\"Bianary number is : \",bny[::-1])\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UZRZYXNXSM9Y",
+        "outputId": "daaf75a9-cd8e-4ca9-825d-e11d3b8be18c"
+      },
+      "execution_count": 39,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "_________________________________________\n",
+            " WELCOME TO DECIMAL TO BIANARY CONVERTER \n",
+            "-----------------------------------------\n",
+            " Enter number to convert : 11\n",
+            "1\n",
+            "1\n",
+            "0\n",
+            "1\n",
+            "-------------------------------\n",
+            "Bianary number is :  1011\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Task 27\n",
+        "Write a python program that converts a binary number to a decimal integer number after taking the binary number as an input from the user.\n",
+        "Note: A binary number can be converted to its corresponding decimal number by multiplying each binary digit with a power of 2, where the power denotes the position of the binary digit\n",
+        "\n",
+        "===============================================================\n",
+        "\n",
+        "Example 1:\n",
+        "For example, to convert 1010 to decimal, we can do this\n",
+        "23 × 1 + 22 × 0 + 21 ×1 + 20 × 0 = 10\n",
+        "Sample Input 1:\n",
+        "1010\n",
+        "Sample Output 1:\n",
+        "10\n",
+        "\n",
+        "===============================================================\n",
+        "\n",
+        "Example 2:\n",
+        "So, to convert 11101, we can do this\n",
+        "24 x 1 + 23 x 1 + 22 x 1 + 21 x 0 + 20 x 1 = 29\n",
+        "Sample Input 2:\n",
+        "11101\n",
+        "Sample Output 2:\n",
+        "29\n"
+      ],
+      "metadata": {
+        "id": "yR-0DsLqWd_v"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"WELCOME TO BIANARY TO DECIMAL CONVERTER \")\n",
+        "print(\"________________________________________\")\n",
+        "\n",
+        "\n",
+        "\n",
+        "user=(input(\"enter number \"))\n",
+        "\n",
+        "\n",
+        "\n",
+        "u_lst=list(user)[::-1]\n",
+        "\n",
+        "sum=0\n",
+        "\n",
+        "for i in range(len(user)):\n",
+        "  sum+=int(u_lst[i])*2**i\n",
+        "\n",
+        "print(sum)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xYshAHnumtx6",
+        "outputId": "116288e3-b6b5-45b9-a150-0963d2a7039c"
+      },
+      "execution_count": 101,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "WELCOME TO BIANARY TO DECIMAL CONVERTER \n",
+            "________________________________________\n",
+            "enter number 1010\n",
+            "________________________________________\n",
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "\n",
+        "#Task 28\n",
+        "\n",
+        "Write a Python program that asks the user for a range (a starting number and an ending number) and then counts how many numbers are prime numbers and how many numbers are perfect numbers between that range. It also prints those numbers in the format shown in the output of the example given below.\n",
+        "\n",
+        "\n",
+        "===============================================================\n",
+        "\n",
+        "\n",
+        "#Hint (1):\n",
+        " We may declare two strings/lists to store the prime and perfect numbers. Inside the loop, we check for prime and perfect numbers and add them to respective string/list besides counting them.\n",
+        "#Hint (2):\n",
+        " We may need to convert numbers in String to integers for checking and calculations. We may again need to convert numbers to Strings for storing and printing as the outputs\n",
+        " shown in the example below.\n",
+        "\n",
+        " ==============================================================\n",
+        "\n",
+        "\n",
+        "Example: If the user gives us a range of between 2 and 6, there are 3 prime numbers (2, 3, 5) and 1 perfect number (6) in that range.\n",
+        "Input:\n",
+        "2\n",
+        "6\n",
+        "Output:\n",
+        "Between 2 and 6,\n",
+        "Found 3 prime numbers\n",
+        "Found 1 perfect number\n",
+        "Prime numbers: 2, 3, 5\n",
+        "Perfect number: 6\n"
+      ],
+      "metadata": {
+        "id": "piA40G3ruEgr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "u_start=int(input(\" Enter number : \"))\n",
+        "\n",
+        "u_end=int(input(\" Enter number : \"))\n",
+        "\n",
+        "prime=0\n",
+        "perfect=0\n",
+        "count=0\n",
+        "sum=0\n",
+        "\n",
+        "prime_lst=[]\n",
+        "perfect_lst=[]\n",
+        "\n",
+        "lst=[]\n",
+        "for i in range(u_start,u_end+1):\n",
+        "\n",
+        "  lst.append(i)\n",
+        "\n",
+        "\n",
+        "print(lst)\n",
+        "\n",
+        "for i in range(len(lst)):\n",
+        "  for j in range(2,lst[i]):\n",
+        "    if lst[i]%j==0:\n",
+        "      count+=1\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "  if count==0:\n",
+        "    prime+=1\n",
+        "    prime_lst.append(lst[i])\n",
+        "    print(prime_lst)\n",
+        "    print(\"its a prime number \", lst[i])\n",
+        "\n",
+        "\n",
+        "  for k in range(len(lst)):\n",
+        "    for x in range(1,lst[i]):\n",
+        "      if lst[i]%x==0:\n",
+        "       sum+=k\n",
+        "\n",
+        "  if sum==lst[i]:\n",
+        "    perfect+=1\n",
+        "    print(\"this is perfect\", lst[i])\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qLb2MTIjuH5X",
+        "outputId": "043a1fe7-ddb8-45cc-834d-4e0a708da024"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Enter number : 2\n",
+            " Enter number : 6\n",
+            "[2, 3, 4, 5, 6]\n",
+            "[2]\n",
+            "its a prime number  2\n",
+            "[2, 3]\n",
+            "its a prime number  3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "u_start=int(input(\" enter number \"))\n",
+        "u_end=int(input(\"enter another number \"))\n",
+        "#------------------------------------------\n",
+        "lst=[]\n",
+        "count=0\n",
+        "\n",
+        "for i in range(u_start,u_end+1):\n",
+        "  lst.append(i)\n",
+        "print(lst)\n",
+        "\n",
+        "\n",
+        "for i in range(len(lst)):\n",
+        "  for j in range(2,lst[i]):\n",
+        "    if lst[i]%j==0:\n",
+        "      count+=1\n",
+        "\n",
+        "  if count==0:\n",
+        "      print(\" prime number \",lst[i])\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UfUpOIj72zoe",
+        "outputId": "aba6ed5f-ca3e-415b-d36d-78b7062214ca"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " enter number 2\n",
+            "enter another number 6\n",
+            "[2, 3, 4, 5, 6]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=2\n",
+        "y=6\n",
+        "count=0\n",
+        "for i in range(x,y+1):\n",
+        "  for j in range(2,i+1):\n",
+        "    if i%j==0:\n",
+        "      count+=1\n",
+        "  if count==2:\n",
+        "      print(\"prime\")\n",
+        "      print(i)\n",
+        "\n",
+        "\n",
+        "\n",
+        "#work on progress"
+      ],
+      "metadata": {
+        "id": "z-F_Rj9xLIv5",
+        "outputId": "cef7bbdd-6a5c-45c5-fbfe-8e9245bdd1a2",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "prime\n",
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "\n",
+        "# **Task 29**\n",
+        "\n",
+        "Write a python program that asks the user for a range, a starting number(inclusive) and an ending number (inclusive). Then, take another input for checking. If the product of all the digits of each number in the range is divisible by the third input, then print the number.\n",
+        "\n",
+        "===============================================================\n",
+        "\n",
+        "Sample Input 1:\n",
+        "25\n",
+        "30\n",
+        "4\n",
+        "Sample Output 1:\n",
+        "12 16 0\n",
+        "Explanation: The product of all the digits of each number from 25 to 30 are 2 × 5, 2 × 6, 2 × 7, 2 × 8, 2 × 9 and 3 × 0. The final products are 10, 12, 14, 16, 18 and 0 respectively. Out of these numbers only 12, 16 and 0 are divisible by the third input 4 and therefore they are printed.\n",
+        "\n",
+        "=====================================\n",
+        "\n",
+        "\n",
+        "\n",
+        "Sample Input 2:\n",
+        "351\n",
+        "356\n",
+        "9\n",
+        "Sample Output 2:\n",
+        "45 90\n",
+        "Explanation: The product of all the digits of each number from 351 to 356 are 3×5×1, 3×5×2, 3×5×3, 3×5×4, 3×5×5 and 3×5×6. The final products are 15, 30, 45, 60, 75 and 90 respectively. Out of these numbers only 45 and 90 are divisible by 9 and therefore they are printed.\n"
+      ],
+      "metadata": {
+        "id": "sY0BMnE2PpFE"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "YNG_mLCXPwvd"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
