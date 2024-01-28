@@ -1,6 +1,6 @@
-# CSE110: Programming Language I (Spring - 2021)
+# CSE110: Programming Language I (Summer - 2022)
 
-> Solutions for the BRAC University Course - CSE110 Lab Assignments (Spring - 2021). Check the `.ipynb` files to get all the solutions of an assignment in a single file.
+> Solutions for the BRAC University Course - CSE110 Lab Assignments (Summer - 2022). Check the `.ipynb` files to get all the solutions of an assignment in a single file.
 >  
 > All the solutions are written with [Python 3.9 ](https://www.python.org/downloads/)
 
