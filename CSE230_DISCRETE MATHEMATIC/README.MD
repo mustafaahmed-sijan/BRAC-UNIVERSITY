@@ -1,7 +1,7 @@
-CSE230: Discrete Mathematics
+##CSE230: Discrete Mathematics
 Offered:
 
-Basic Counting Techniques: Rule of Sum, Rule of Product, Rule of Subtraction, Rule of Division, The Pigeonhole Principle; Combinatorics: Permutations and Combinations, Binomial Coefficient and Identities; Probability: Discrete Probability, Probabilistic Reasoning, Probability Theory, Conditional Probability, Independence, Random Variables, Bayes’ Theorem, Distributions, Expectation and Variance; Propositional Logic: Logic and Proofs, Logic Puzzles, Logic Circuits, Propositional Equivalences, Satisfiability, Predicates and Quantifiers; Number Theory: Modular Arithmetic, Modular Exponentiation, Prime Numbers, Sieve Algorithm, Cryptography; Induction and Recursion: Mathematical Induction, Recurrence Relations, Applications of Recurrence Relations, Recursive Algorithms and Their Correctness; Graph: Graph and Graph Models, Terminologies of Graph, Some Graph Algorithms.
+Basic Counting Techniques: Rule of Sum, Rule of Product, Rule of Subtraction, Rule of Division, The Pigeonhole Principle; Combinatorics: Permutations and Combinations, Binomial Coefficient and Identities; Probability: Discrete Probability, Probabilistic Reasoning, Probability Theory, Conditional Probability, Independence, Random Variables, Bayes’ Theorem, Distributions, Expectation and Variance; Propositional Logic: Logic and Proofs, Logic Puzzles, Logic Circuits, Propositional Equivalences, Satisfiability, Predicates, and Quantifiers; Number Theory: Modular Arithmetic, Modular Exponentiation, Prime Numbers, Sieve Algorithm, Cryptography; Induction and Recursion: Mathematical Induction, Recurrence Relations, Applications of Recurrence Relations, Recursive Algorithms and Their Correctness; Graph: Graph and Graph Models, Terminologies of Graph, Some Graph Algorithms.
 
 Course Objectives
 The objectives of this course are
