@@ -1,14 +1,3 @@
-CSE260 Course Marks Distribution
-
-THERE IS NO BONUS MARKS IN THIS COURSE
-
-Attendance: 05 [70% attendance is mandatory for theory, 90% attendance is mandatory for lab to sit for the final exam]
-Quiz : 15 (N-1)
-Assignment: 5 (All counted, average)
-Lab: 20  
-Mid: 25 [No option will be given in the question]
-Final: 30 [1 option will be given in the question, may be mandatory questions]
-
 
 Syllabus:
 Lecture 1 [Number System Basics & Calculations]
