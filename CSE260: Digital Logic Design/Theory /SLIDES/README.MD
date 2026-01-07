@@ -14,5 +14,4 @@ Lecture 7 [MSI Circuits]
 Lecture 8 [Introduction to Sequential Circuits (Flip Flop Basics)]
 Lecture 9 [Sequential Circuit Analysis]
 Lecture 10 [Memory]
-
 FINAL
