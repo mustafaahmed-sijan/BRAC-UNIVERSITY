@@ -1,69 +1,29 @@
-🧠 Data Structures Repository
+# 🧠 Data Structures Repository  
+> Engineered for Performance • Designed for Scalability • Built with Python
 
-This repository contains implementations of major Data Structures — from Array to Hash Table.
+---
 
-📘 Table of Contents
+## 🚀 Navigation Matrix
 
-Array
+| 🧩 Module ID | ⚡ Core Structure | 🧠 Key Concepts | 🔬 Implementation Focus |
+|--------------|------------------|-----------------|-------------------------|
+| DS-01 | 🧮 Array | Indexing, Traversal, Dynamic Resizing | Insert • Delete • Search |
+| DS-02 | 🔗 Linked List | Pointers, Node Structure | Singly • Doubly • Circular |
+| DS-03 | 🧱 Stack | LIFO Principle | Push • Pop • Peek |
+| DS-04 | 🚦 Queue | FIFO Principle | Linear • Circular • Priority |
+| DS-05 | 🌲 Tree | Hierarchical Data | Traversals • Recursion |
+| DS-06 | 🌿 Binary Search Tree | Ordered Structure | Insert • Delete • Search |
+| DS-07 | ⛰️ Heap / Priority Queue | Heap Property | MinHeap • MaxHeap • Heapify |
+| DS-08 | 🕸️ Graph | Connectivity Models | BFS • DFS |
+| DS-09 | 💡 Hash Table | Hashing Algorithms | Collision Handling |
+| DS-10 | ⚙️ Complexity Analyzer | Big-O Evaluation | Time & Space Analysis |
+| DS-11 | 📚 Knowledge Base | Learning Resources | Books • References |
 
-Linked List
+---
 
-Stack
+## 🛰 System Overview
 
-Queue
+> This repository demonstrates structured implementation of fundamental data structures, optimized with clean architecture and complexity awareness.
 
-Tree
-
-Binary Search Tree (BST)
-
-Heap / Priority Queue
-
-Graph
-
-Hash Table / Hash Map
-
-🧮 Array
-
-Implementation of array operations including insertion, deletion, traversal, and searching.
-
-🔗 Linked List
-
-Implementation of singly, doubly, and circular linked lists with basic operations.
-
-🧱 Stack
-
-Implementation of stack using arrays and linked lists. Includes push, pop, peek, and isEmpty operations.
-
-🚦 Queue
-
-Implementation of queue using arrays and linked lists. Includes circular and priority queues.
-
-🌲 Tree
-
-Basic tree structure and traversal algorithms: inorder, preorder, postorder, and level order.
-
-🌿 Binary Search Tree (BST)
-
-Implementation of BST with insertion, deletion, and search operations.
-
-⛰️ Heap / Priority Queue
-
-Implementation of min heap and max heap. Includes heapify, insertion, and deletion.
-
-🕸️ Graph
-
-Representation of graphs using adjacency list and adjacency matrix. Includes BFS and DFS algorithms.
-
-💡 Hash Table / Hash Map
-
-Implementation of hash table using different hashing and collision resolution techniques.
-
-⚙️ Complexity Summary
-
-Time and space complexities for all major data structures.
-
-📚 References
-
-Books, online tutorials, and resources used for learning and implementation.
-
+---
 
